@@ -1,71 +1,61 @@
 ﻿    using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
-    public float switchDelay;
-    public GameObject[] stateObjects;
-    public GameObject[] gameObjects;
-    private bool canSwitch;
-    private int currentState;
-    private float t;
-
-    
-    private void Start ()
+    public class GameManager : MonoBehaviour
     {
-        currentState = 0;
-        canSwitch = false;
+        public float switchDelay;
+        public GameObject[] stateObjects;
+        public GameObject[] gameObjects;
+        public GameObject switchText;
+        private bool canSwitch;
+        private int currentState;
+        private float t;
 
-        for (int i = 0; i < stateObjects.Length; i++)
+        private void Start ()
         {
-            if (i == currentState)
+            currentState = 0;
+            canSwitch = false;
+
+            for (int i = 0; i < stateObjects.Length; i++)
             {
-                stateObjects[i].SetActive (true);
-                gameObjects[i].SetActive (true);
-            }
-            else
-            {
-                stateObjects[i].SetActive (false);
-                gameObjects[i].SetActive (false);
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Death")
-        {
-            Debug.Log("LOSS!!");
-        }
-
-        Debug.Log("CONTINUW!!");
-    }
-
-
-    private void Update ()
-    {
-        t += Time.deltaTime;
-
-        if (t >= switchDelay)
-        {
-            canSwitch = true;
-        }
-
-        if (canSwitch)
-        {
-            if (Input.GetButton ("Switch"))
-            {
-                stateObjects[currentState].SetActive (false);
-                gameObjects[currentState].SetActive (false);
-
-                currentState = (currentState + 1) % stateObjects.Length;
-
-                stateObjects[currentState].SetActive (true);
-                gameObjects[currentState].SetActive (true);
-
-                canSwitch = false;
-                t = 0;
+                if (i == currentState)
+                {
+                    stateObjects[i].SetActive (true);
+                    gameObjects[i].SetActive (true);
+                }
+                else
+                {
+                    stateObjects[i].SetActive (false);
+                    gameObjects[i].SetActive (false);
+                }
             }
         }
 
+        private void Update ()
+        {
+            t += Time.deltaTime;
+
+            if (t >= switchDelay)
+            {
+                canSwitch = true;
+            }
+
+            if (canSwitch)
+            {
+                if (Input.GetButton ("Switch"))
+                {
+                    switchText.GetComponent<Animator> ().Play ("Switch");
+                    stateObjects[currentState].SetActive (false);
+                    gameObjects[currentState].SetActive (false);
+
+                    currentState = (currentState + 1) % stateObjects.Length;
+
+                    stateObjects[currentState].SetActive (true);
+                    gameObjects[currentState].SetActive (true);
+
+                    canSwitch = false;
+                    t = 0;
+                }
+            }
+
+        }
     }
-}

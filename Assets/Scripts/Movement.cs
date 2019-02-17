@@ -17,7 +17,6 @@ public class Movement : MonoBehaviour
         Vector2 movement = new Vector2 (horizontal_movement * acceleration, 0);
         if (Mathf.Abs (rb.velocity.x) <= maxSpeed);
         {
-            Debug.Log(Mathf.Abs (rb.velocity.x) <= maxSpeed);
             rb.AddForce (movement, ForceMode2D.Force);
         }
     }

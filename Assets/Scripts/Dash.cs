@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour
     public float dashForce;
     public float dashCooldown;
     private Rigidbody2D rb;
-    private bool canDash, isDashing;
+    private bool canDash;
     private float timer;
 
     private void Start ()
@@ -31,7 +31,7 @@ public class Dash : MonoBehaviour
         {
             if (Input.GetButton ("Jump"))
             {
-                rb.AddForce (movement * dashForce * 1.5f, ForceMode2D.Impulse);
+                rb.AddForce (movement * dashForce, ForceMode2D.Impulse);
                 canDash = false;
                 timer = 0;
             }
