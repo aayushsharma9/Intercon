@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿    using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int currentState;
     private float t;
 
+    
     private void Start ()
     {
         currentState = 0;
@@ -28,6 +29,17 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Death")
+        {
+            Debug.Log("LOSS!!");
+        }
+
+        Debug.Log("CONTINUW!!");
+    }
+
 
     private void Update ()
     {
@@ -54,5 +66,6 @@ public class GameManager : MonoBehaviour
                 t = 0;
             }
         }
+
     }
 }

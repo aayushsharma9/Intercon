@@ -123,8 +123,8 @@ GameObject:
   - component: {fileID: 51834462}
   - component: {fileID: 51834463}
   m_Layer: 0
-  m_Name: Death
-  m_TagString: Untagged
+  m_Name: DeathCon
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 408064723}
   - component: {fileID: 408064722}
   - component: {fileID: 408064724}
+  - component: {fileID: 408064725}
   m_Layer: 0
   m_Name: Con
   m_TagString: Win
@@ -612,6 +613,18 @@ MonoBehaviour:
   maxSpeed: 7
   acceleration: 10
   jumpForce: 300
+--- !u!114 &408064725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408064719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560ce9601c1526c40bfa714b1d3d4c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,8 +718,8 @@ GameObject:
   - component: {fileID: 600185096}
   - component: {fileID: 600185097}
   m_Layer: 0
-  m_Name: Death (1)
-  m_TagString: Untagged
+  m_Name: DeathNex
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +748,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2048,6 +2061,7 @@ GameObject:
   - component: {fileID: 1904739284}
   - component: {fileID: 1904739283}
   - component: {fileID: 1904739282}
+  - component: {fileID: 1904739286}
   m_Layer: 0
   m_Name: Nex
   m_TagString: Untagged
@@ -2179,6 +2193,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1904739286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904739280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560ce9601c1526c40bfa714b1d3d4c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972135812
 GameObject:
   m_ObjectHideFlags: 0
