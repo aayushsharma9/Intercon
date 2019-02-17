@@ -15,7 +15,7 @@ public class WinCondition : MonoBehaviour
     }
     private void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.tag == "Win")
+        if (other.tag == "Player" && other.gameObject != Nex)
         {
             Debug.Log ("WIN!");
         }
