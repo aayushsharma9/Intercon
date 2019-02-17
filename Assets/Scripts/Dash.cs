@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
     public float dashForce;
-    public float dashDuration, dashCooldown;
+    public float dashCooldown;
     private Rigidbody2D rb;
     private bool canDash, isDashing;
     private float timer;
@@ -27,10 +27,14 @@ public class Dash : MonoBehaviour
         float horizontal_movement = Input.GetAxis ("Horizontal");
         Vector2 movement = new Vector2 (horizontal_movement, 0.0f);
 
-        if (Input.GetButton ("Dash") && canDash)
+        if (canDash)
         {
-            rb.AddForce (movement * dashForce * 1.5f);
-            canDash = false;
+            if (Input.GetButton ("Jump"))
+            {
+                rb.AddForce (movement * dashForce * 1.5f, ForceMode2D.Impulse);
+                canDash = false;
+                timer = 0;
+            }
         }
     }
 }

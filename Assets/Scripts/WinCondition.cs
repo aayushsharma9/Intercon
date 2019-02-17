@@ -20,7 +20,6 @@ public class WinCondition : MonoBehaviour
         {
             Debug.Log ("WIN!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
-
         }
     }
 }

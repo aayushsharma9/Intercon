@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    public float jumpForce;
+    public float jumpIncrements;
+    public float jumpImpulse;
     public float jumpDuration;
     private Rigidbody2D rb;
     private bool isJumping, isGrounded;
@@ -17,11 +18,11 @@ public class Jump : MonoBehaviour
         t = 0;
     }
 
-    void Update ()
+    void FixedUpdate ()
     {
         if (isGrounded && Input.GetButton ("Jump"))
         {
-            rb.AddForce (Vector2.up * jumpForce * rb.gravityScale);
+            rb.AddForce (Vector2.up * jumpImpulse * rb.gravityScale);
             isJumping = true;
             isGrounded = false;
             t = 0;
@@ -29,7 +30,7 @@ public class Jump : MonoBehaviour
 
         if (Input.GetButton ("Jump") && isJumping && t <= jumpDuration)
         {
-            rb.AddForce (Vector2.up * jumpForce * rb.gravityScale);
+            rb.AddForce (Vector2.up * jumpIncrements * rb.gravityScale);
             t += Time.deltaTime;
         }
 
