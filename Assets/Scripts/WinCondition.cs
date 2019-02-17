@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class WinCondition : MonoBehaviour
         if (other.tag == "Player" && other.gameObject != Nex)
         {
             Debug.Log ("WIN!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+
         }
     }
 }

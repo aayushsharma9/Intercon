@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Win
+  - Death
   layers:
   - Default
   - TransparentFX
