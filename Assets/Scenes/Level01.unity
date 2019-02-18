@@ -654,9 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458d1258d4e2db943b3ad33755ea46f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tele1: {fileID: 1816131185}
-  tele2: {fileID: 1895842154}
-  Player: {fileID: 408064719}
+  connectingTele: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2543,7 @@ GameObject:
   - component: {fileID: 1816131188}
   - component: {fileID: 1816131187}
   - component: {fileID: 1816131186}
+  - component: {fileID: 1816131190}
   m_Layer: 0
   m_Name: TeleA1
   m_TagString: Tele
@@ -2661,6 +2660,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816131190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816131185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458d1258d4e2db943b3ad33755ea46f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingTele: {fileID: 1895842154}
 --- !u!1 &1895842154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2685,7 @@ GameObject:
   - component: {fileID: 1895842157}
   - component: {fileID: 1895842156}
   - component: {fileID: 1895842155}
+  - component: {fileID: 1895842159}
   m_Layer: 0
   m_Name: TeleA
   m_TagString: Tele
@@ -2789,6 +2802,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895842159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895842154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458d1258d4e2db943b3ad33755ea46f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingTele: {fileID: 1816131185}
 --- !u!1 &1904739280
 GameObject:
   m_ObjectHideFlags: 0
