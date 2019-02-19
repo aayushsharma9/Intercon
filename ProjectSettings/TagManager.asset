@@ -9,8 +9,7 @@ TagManager:
   - Death
   - Tele
   - JumpPad
-  - CollectCon
-  - CollectNex
+  - Pickup
   layers:
   - Default
   - TransparentFX
