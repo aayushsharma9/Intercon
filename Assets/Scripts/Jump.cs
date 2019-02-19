@@ -24,6 +24,7 @@ public class Jump : MonoBehaviour
         {
             rb.AddForce(Vector2.up * 1000);
             Debug.Log("JUMPAD");
+            isJumping = true;
         }
     }
     void FixedUpdate ()
