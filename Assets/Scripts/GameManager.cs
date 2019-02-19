@@ -9,6 +9,13 @@
         private bool canSwitch;
         private int currentState;
         private float t;
+        private Pickups pickup;
+        int nex, con;
+
+        private void Awake()
+        {
+            pickup = GetComponent<Pickups>();
+        }
 
         private void Start ()
         {
@@ -32,6 +39,10 @@
 
         private void Update ()
         {
+            nex = pickup.nexTotal;
+            con = pickup.conTotal;
+            Debug.Log("NEX: " + nex + "  CON: " + con);
+
             t += Time.deltaTime;
 
             if (t >= switchDelay)
