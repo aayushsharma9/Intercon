@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour
     public float jumpImpulse;
     public float jumpDuration;
     private Rigidbody2D rb;
-    private bool isJumping, isGrounded;
+    private bool isJumping, canJump;
     private float t;
 
     public void Start ()
@@ -18,22 +18,13 @@ public class Jump : MonoBehaviour
         t = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Jumppad")
-        {
-            rb.AddForce(Vector2.up * 1000);
-            Debug.Log("JUMPAD");
-            isJumping = true;
-        }
-    }
     void FixedUpdate ()
     {
-        if (isGrounded && Input.GetButton ("Jump"))
+        if (canJump && Input.GetButton ("Jump"))
         {
             rb.AddForce (Vector2.up * jumpImpulse * rb.gravityScale);
             isJumping = true;
-            isGrounded = false;
+            canJump = false;
             t = 0;
         }
 
@@ -51,17 +42,18 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D other)
     {
-        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "Jumppad")
+        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "JumpPad")
         {
-            isGrounded = true;
-        }   
+            canJump = true;
+            Debug.Log ("triggered by " + other.gameObject.tag);
+        }
     }
 
     private void OnCollisionExit2D (Collision2D other)
     {
         if (other.gameObject.tag == "Floor")
         {
-            isGrounded = false;
+            canJump = false;
         }
     }
 }

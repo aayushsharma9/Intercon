@@ -8,7 +8,7 @@ TagManager:
   - Win
   - Death
   - Tele
-  - Jumppad
+  - JumpPad
   layers:
   - Default
   - TransparentFX

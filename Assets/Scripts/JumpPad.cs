@@ -4,32 +4,15 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    private bool isJumping;
-    private float t;
-    Rigidbody2D rb;
+    public float jumpForce;
+    private Rigidbody2D rb;
 
-    private void Start()
+    private void OnCollisionEnter2D (Collision2D other)
     {
-        Debug.Log(rb);
-        isJumping = false;
-        t = 0;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            rb = other.GetComponent<Rigidbody2D>();
-            rb.AddForce(Vector2.up * 1000);
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if(Input.GetKey(KeyCode.Space) && !isJumping)
-        {
-            rb.AddForce(Vector2.up * 1000);
-            Debug.Log("YELLO");
-            isJumping = true;
+            rb = other.gameObject.GetComponent<Rigidbody2D> ();
+            rb.AddForce (Vector2.up * jumpForce);
         }
     }
 }

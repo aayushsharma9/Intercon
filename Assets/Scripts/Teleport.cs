@@ -5,7 +5,7 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject connectingTele;
-    public static bool isTeleporting;
+    private bool isTeleporting;
 
     private void OnTriggerEnter2D (Collider2D other)
     {
@@ -13,7 +13,7 @@ public class Teleport : MonoBehaviour
         {
             if (!isTeleporting)
             {
-                isTeleporting = true;
+                connectingTele.GetComponent<Teleport>().setTeleporting();
                 Vector2 connectingTelePosition = new Vector2 (connectingTele.transform.position.x, connectingTele.transform.position.y);
                 other.transform.position = connectingTelePosition;
             }
@@ -25,6 +25,11 @@ public class Teleport : MonoBehaviour
         if (other.tag == "Player")
         {
             isTeleporting = false;
-        }    
+        }
+    }
+
+    public void setTeleporting ()
+    {
+        isTeleporting = true;
     }
 }
