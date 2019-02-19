@@ -29,9 +29,10 @@ public class Dash : MonoBehaviour
 
         if (canDash)
         {
-            if (Input.GetButton ("Jump"))
+            if (Input.GetButton ("Dash"))
             {
                 rb.AddForce (movement * dashForce, ForceMode2D.Impulse);
+                Debug.Log ("DASH!");
                 canDash = false;
                 timer = 0;
             }

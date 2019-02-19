@@ -45,7 +45,6 @@ public class Jump : MonoBehaviour
         if (other.gameObject.tag == "Floor" || other.gameObject.tag == "JumpPad")
         {
             canJump = true;
-            Debug.Log ("triggered by " + other.gameObject.tag);
         }
     }
 
