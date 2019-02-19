@@ -25,6 +25,6 @@ public class Teleport : MonoBehaviour
         if (other.tag == "Player")
         {
             isTeleporting = false;
-        }
+        }    
     }
 }

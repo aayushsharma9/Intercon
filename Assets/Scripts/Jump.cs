@@ -18,6 +18,14 @@ public class Jump : MonoBehaviour
         t = 0;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Jumppad")
+        {
+            rb.AddForce(Vector2.up * 1000);
+            Debug.Log("JUMPAD");
+        }
+    }
     void FixedUpdate ()
     {
         if (isGrounded && Input.GetButton ("Jump"))
@@ -42,10 +50,10 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D other)
     {
-        if (other.gameObject.tag == "Floor")
+        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "Jumppad")
         {
             isGrounded = true;
-        }
+        }   
     }
 
     private void OnCollisionExit2D (Collision2D other)
