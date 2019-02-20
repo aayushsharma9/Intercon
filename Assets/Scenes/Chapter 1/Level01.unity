@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 85778386}
   - component: {fileID: 85778388}
   - component: {fileID: 85778387}
+  - component: {fileID: 85778389}
   m_Layer: 0
   m_Name: platform U3
   m_TagString: Floor
@@ -423,6 +424,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &85778389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85778385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1b1de0984cc404e941d10ae3ec7ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroySec: 4
 --- !u!1 &170891013
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +586,11 @@ PrefabInstance:
     - target: {fileID: 1646790358326786027, guid: df76a76bcd12ff84dbaff2c2e98c387f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646790358655861731, guid: df76a76bcd12ff84dbaff2c2e98c387f,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
