@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691310161}
   - component: {fileID: 1691310162}
+  - component: {fileID: 1528793491}
   m_Layer: 0
   m_Name: PortalSprite
   m_TagString: Untagged
@@ -79,6 +80,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1528793491
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691310160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c81b3552870652048949e1b829c53622, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3471902565304339998
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +110,6 @@ GameObject:
   - component: {fileID: 3471902565304339994}
   - component: {fileID: 3471902565304339999}
   - component: {fileID: 3471902565304339995}
-  - component: {fileID: 1895842155}
   - component: {fileID: 8216192115575143957}
   m_Layer: 0
   m_Name: Portal
@@ -148,25 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectingTele: {fileID: 0}
---- !u!95 &1895842155
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3471902565304339998}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03e9c8f01f16e55419149779a45b6abf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &8216192115575143957
 CircleCollider2D:
   m_ObjectHideFlags: 0

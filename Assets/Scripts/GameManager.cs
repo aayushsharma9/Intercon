@@ -34,8 +34,6 @@
         {
             t += Time.deltaTime;
 
-            Debug.Log (Resources.FindObjectsOfTypeAll<Pickup> ().Length);
-
             if (Resources.FindObjectsOfTypeAll<Pickup> ().Length == 1)
             {
                 collectedText.GetComponent<Animator> ().Play ("PopUpAnimation");

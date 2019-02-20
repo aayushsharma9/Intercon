@@ -20,7 +20,8 @@ public class JumpPad : MonoBehaviour
 
         if (t >= ringSpawnInterval)
         {
-            Instantiate (RingObject, transform.position, Quaternion.identity);
+            GameObject ring = Instantiate (RingObject, transform.position, transform.rotation);
+            ring.transform.parent = gameObject.transform;
             t = 0;
         }
     }
@@ -30,7 +31,7 @@ public class JumpPad : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             rb = other.gameObject.GetComponent<Rigidbody2D> ();
-            rb.AddForce (Vector2.up * jumpForce * rb.gravityScale);
+            rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
