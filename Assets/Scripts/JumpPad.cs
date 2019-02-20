@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public float jumpForce, ringSpawnInterval;
+    public float jumpForce, jumpBoost;
+    public float ringSpawnInterval;
     public GameObject RingObject;
     private Rigidbody2D rb;
     private float t;
+    private float boost;
 
     private void Start ()
     {
         t = 0;
+        boost = 0;
     }
 
     private void Update ()
     {
         t += Time.deltaTime;
+
+        if (Input.GetButtonDown ("Jump"))
+        {
+            boost = jumpBoost;
+        }
+
+        if (Input.GetButtonUp ("Jump"))
+        {
+            boost = 0;
+        }
 
         if (t >= ringSpawnInterval)
         {
@@ -31,11 +44,7 @@ public class JumpPad : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             rb = other.gameObject.GetComponent<Rigidbody2D> ();
-            rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
-            if (Input.GetButton ("Jump"))
-            {
-                // rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
-            }
+            rb.AddForce (this.transform.up * (jumpForce + boost), ForceMode2D.Impulse);
         }
     }
 

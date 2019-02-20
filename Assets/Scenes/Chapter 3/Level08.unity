@@ -3687,6 +3687,11 @@ PrefabInstance:
       propertyPath: ringSpawnInterval
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7735437787346296458, guid: 6d47638f092e8c84284d7cd95dc2ac90,
+        type: 3}
+      propertyPath: jumpBoost
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d47638f092e8c84284d7cd95dc2ac90, type: 3}
 --- !u!4 &2111298679 stripped
