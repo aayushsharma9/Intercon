@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 85778386}
   - component: {fileID: 85778388}
   - component: {fileID: 85778387}
+  - component: {fileID: 85778389}
   m_Layer: 0
   m_Name: platform U3
   m_TagString: Floor
@@ -522,6 +523,11 @@ PrefabInstance:
     - target: {fileID: 1646790358326786027, guid: df76a76bcd12ff84dbaff2c2e98c387f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646790358655861731, guid: df76a76bcd12ff84dbaff2c2e98c387f,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
