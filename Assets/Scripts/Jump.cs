@@ -22,7 +22,11 @@ public class Jump : MonoBehaviour
     {
         if (canJump && Input.GetButtonDown ("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.velocity = new Vector2 (rb.velocity.x, 0);
+        }
+
+        if (canJump && Input.GetButton ("Jump"))
+        {
             rb.AddForce (Vector2.up * jumpImpulse * rb.gravityScale);
             isJumping = true;
             canJump = false;
@@ -46,6 +50,7 @@ public class Jump : MonoBehaviour
         if (other.gameObject.tag == "Floor" || other.gameObject.tag == "JumpPad")
         {
             canJump = true;
+            isJumping = false;
         }
     }
 

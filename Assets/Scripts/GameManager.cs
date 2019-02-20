@@ -2,6 +2,7 @@
 
     public class GameManager : MonoBehaviour
     {
+        public Color[] stateBackgroundColors;
         public float switchDelay;
         public GameObject[] stateObjects;
         public GameObject[] gameObjects;
@@ -14,6 +15,7 @@
         {
             currentState = 0;
             canSwitch = false;
+            Camera.main.backgroundColor = stateBackgroundColors[currentState];
 
             for (int i = 0; i < stateObjects.Length; i++)
             {
@@ -56,6 +58,8 @@
 
                     stateObjects[currentState].SetActive (true);
                     gameObjects[currentState].SetActive (true);
+                    
+                    Camera.main.backgroundColor = stateBackgroundColors[currentState];
 
                     canSwitch = false;
                     t = 0;
