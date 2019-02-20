@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 3216892218645373304}
   - component: {fileID: 3216892218645373305}
   m_Layer: 0
-  m_Name: Collision Detector
+  m_Name: Con Collision Detector
   m_TagString: Win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

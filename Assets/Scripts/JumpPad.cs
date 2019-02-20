@@ -32,6 +32,10 @@ public class JumpPad : MonoBehaviour
         {
             rb = other.gameObject.GetComponent<Rigidbody2D> ();
             rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
+            if (Input.GetButton ("Jump"))
+            {
+                // rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
+            }
         }
     }
 
