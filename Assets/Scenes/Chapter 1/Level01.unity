@@ -239,6 +239,37 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2566914047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6065597435513543866, guid: 03e8882109c24ea48bf3ee6d197b919e,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -317,6 +348,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.0719562
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.14991823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.1981132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c8332023b5adc4cae48666423660d0, type: 3}

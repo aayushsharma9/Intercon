@@ -818,26 +818,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5362541184055279055, guid: 28bd2bcb81c30954ba1a1f5f98280217,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362541184055279055, guid: 28bd2bcb81c30954ba1a1f5f98280217,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362541184055279055, guid: 28bd2bcb81c30954ba1a1f5f98280217,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912111286943488507, guid: 28bd2bcb81c30954ba1a1f5f98280217,
-        type: 3}
-      propertyPath: rotationFactor
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28bd2bcb81c30954ba1a1f5f98280217, type: 3}
 --- !u!1 &373025938
@@ -2728,6 +2708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065597435602321410, guid: 03e8882109c24ea48bf3ee6d197b919e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6065597435513543866, guid: 03e8882109c24ea48bf3ee6d197b919e,
         type: 3}

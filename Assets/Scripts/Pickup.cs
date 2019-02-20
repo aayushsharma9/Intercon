@@ -10,7 +10,7 @@ public class Pickup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<Animator> ().Play ("Collect");
+            gameObject.GetComponentInChildren<Animator> ().Play ("Collect");
             Destroy (gameObject, collectClip.length);
         }
     }
