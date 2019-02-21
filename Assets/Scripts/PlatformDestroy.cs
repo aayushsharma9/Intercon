@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class PlatformDestroy : MonoBehaviour
 {
-    public int destroySec;
+    public AnimationClip destroyClip;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D (Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.tag == "Player")
         {
-            Debug.Log("Wait for it!");
-            StartCoroutine(destroy(destroySec));
+            gameObject.GetComponentInChildren<Animator> ().Play ("Autodestroy");
+            Destroy (gameObject, destroyClip.length);
         }
     }
-    IEnumerator destroy(int destroySec)
-    {
-        yield return new WaitForSeconds(destroySec);
-        Destroy(gameObject);
-        Debug.Log("Ayy Boom!!");
-    }
-
 }

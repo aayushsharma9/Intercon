@@ -19,7 +19,7 @@ public class WinCondition : MonoBehaviour
         if (other.tag == "Win" && other.gameObject.name != gameObject.name)
         {
             Debug.Log (other.gameObject.name + gameObject.name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
         }
     }
 }
