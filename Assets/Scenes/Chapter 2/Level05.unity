@@ -318,6 +318,22 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1311374034, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_text
+      value: '''Light Amplification by Stimulated Emission of Radiation''.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311374034, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494160510, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_text
+      value: The shortest path is not always righteous.
+      objectReference: {fileID: 0}
+    - target: {fileID: 494160510, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
 --- !u!1 &112862873 stripped

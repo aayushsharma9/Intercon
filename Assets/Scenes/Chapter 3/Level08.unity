@@ -2738,6 +2738,10 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1311374034, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_text
+      value: Maintaining balance.
+      objectReference: {fileID: 0}
     - target: {fileID: 494160510, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -2745,6 +2749,13 @@ PrefabInstance:
     - target: {fileID: 494160510, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494160510, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_text
+      value: 'The one where Mr. & Mrs. Cube go to a trampoline park!
+
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1951655063, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_havePropertiesChanged
