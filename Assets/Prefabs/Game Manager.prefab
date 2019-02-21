@@ -46,6 +46,7 @@ MonoBehaviour:
   stateBackgroundColors:
   - {r: 0.9921569, g: 0.8235295, b: 0.7803922, a: 0}
   - {r: 0.07058824, g: 0.14901961, b: 0.2, a: 0}
+  maxSwitches: 10
   switchDelay: 0.8
   stateObjects:
   - {fileID: 0}

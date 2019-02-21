@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             gameObject.GetComponentInChildren<Animator> ().Play ("Collect");
+            gameObject.GetComponent<BoxCollider2D> ().enabled = false;  
             Destroy (gameObject, collectClip.length);
         }
     }

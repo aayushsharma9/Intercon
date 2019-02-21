@@ -9,7 +9,6 @@ public class Death : MonoBehaviour
     {
         if (other.tag == "Death")
         {
-            Debug.Log("LOSS!!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
