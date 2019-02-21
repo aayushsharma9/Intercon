@@ -27,6 +27,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void loadScene (int index)
+    {
+        SceneManager.LoadScene (index, LoadSceneMode.Single);
+    }
+    
     public void nextLevel ()
     {
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1, LoadSceneMode.Single);
