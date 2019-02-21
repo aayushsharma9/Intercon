@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene (index, LoadSceneMode.Single);
     }
-    
+
     public void nextLevel ()
     {
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1, LoadSceneMode.Single);
