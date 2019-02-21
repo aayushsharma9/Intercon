@@ -24,7 +24,6 @@ public class Patrol : MonoBehaviour
 
         if (Mathf.Abs(Vector2.Distance(selfPos, des)) < 1)
         {
-            Debug.Log("HELA");
             destination = (destination + 1) % checkPoints.Length;
         }
 
@@ -32,7 +31,6 @@ public class Patrol : MonoBehaviour
         moveDir.Normalize();
         gameObject.transform.Translate(moveDir * speed * Time.deltaTime);
         //Vector2.LerpUnclamped (selfPos, des, speed);
-        Debug.Log("HELA1");
 
     }
 }
