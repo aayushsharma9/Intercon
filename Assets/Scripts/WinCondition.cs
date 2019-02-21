@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
     public GameObject Follow;
+    private GameManager gm;
+
+    private void Start ()
+    {
+        gm = GameObject.Find ("Game Manager").GetComponent<GameManager> ();
+    }
 
     private void Update ()
     {
@@ -19,7 +24,7 @@ public class WinCondition : MonoBehaviour
         if (other.tag == "Win" && other.gameObject.name != gameObject.name)
         {
             Debug.Log (other.gameObject.name + gameObject.name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+            gm.LevelComplete ();
         }
     }
 }
