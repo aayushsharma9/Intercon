@@ -7,6 +7,7 @@ public class Patrol : MonoBehaviour
     public GameObject[] checkPoints;
     public float speed;
     private int destination;
+    bool collided = false;
 
     private void Start ()
     {
@@ -15,12 +16,25 @@ public class Patrol : MonoBehaviour
         destination++;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collided = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collided = false;
+        }
+    }
     private void Update ()
     {
         Vector2 selfPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
         Vector2 des = new Vector2(checkPoints[destination].transform.position.x, checkPoints[destination].transform.position.y);
-
-        //gameObject.transform.position = Vector2.Lerp(selfPos, des, speed * Time.deltaTime);
 
         if (Mathf.Abs(Vector2.Distance(selfPos, des)) < 1)
         {
@@ -30,7 +44,11 @@ public class Patrol : MonoBehaviour
         Vector2 moveDir = des - selfPos;
         moveDir.Normalize();
         gameObject.transform.Translate(moveDir * speed * Time.deltaTime);
-        //Vector2.LerpUnclamped (selfPos, des, speed);
 
+        if(collided)
+        {
+            GameObject.FindGameObjectWithTag("Player").transform.Translate(moveDir * speed * Time.deltaTime);
+        }
+        
     }
 }
