@@ -7227,5 +7227,10 @@ PrefabInstance:
       propertyPath: checkPoints.Array.data[1]
       value: 
       objectReference: {fileID: 143363603}
+    - target: {fileID: 6766510721839313782, guid: 4e7740e0dbcfc8d42a21c4e59f880a01,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 373879196}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7740e0dbcfc8d42a21c4e59f880a01, type: 3}
