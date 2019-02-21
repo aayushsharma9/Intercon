@@ -17,10 +17,22 @@ public class Patrol : MonoBehaviour
 
     private void Update ()
     {
-        Vector3.Lerp (gameObject.transform.position, checkPoints[destination].transform.position, speed * Time.deltaTime);
-        if (Vector3.Distance (gameObject.transform.position, checkPoints[destination].transform.position) < 0.01f)
+        Vector2 selfPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        Vector2 des = new Vector2(checkPoints[destination].transform.position.x, checkPoints[destination].transform.position.y);
+
+        //gameObject.transform.position = Vector2.Lerp(selfPos, des, speed * Time.deltaTime);
+
+        if (Mathf.Abs(Vector2.Distance(selfPos, des)) < 1)
         {
+            Debug.Log("HELA");
             destination = (destination + 1) % checkPoints.Length;
         }
+
+        Vector2 moveDir = des - selfPos;
+        moveDir.Normalize();
+        gameObject.transform.Translate(moveDir * speed * Time.deltaTime);
+        //Vector2.LerpUnclamped (selfPos, des, speed);
+        Debug.Log("HELA1");
+
     }
 }
