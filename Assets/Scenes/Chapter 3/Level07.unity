@@ -2570,6 +2570,11 @@ PrefabInstance:
       propertyPath: collectedText
       value: 
       objectReference: {fileID: 2039816977}
+    - target: {fileID: 235268293041417479, guid: 6e86084b5d03a9948b77968479c5f10a,
+        type: 3}
+      propertyPath: maxSwitches
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e86084b5d03a9948b77968479c5f10a, type: 3}
 --- !u!1001 &6065597437284401070

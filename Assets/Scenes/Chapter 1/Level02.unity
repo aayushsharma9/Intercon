@@ -1560,6 +1560,11 @@ PrefabInstance:
       propertyPath: collectedText
       value: 
       objectReference: {fileID: 1962059317}
+    - target: {fileID: 235268293041417479, guid: 6e86084b5d03a9948b77968479c5f10a,
+        type: 3}
+      propertyPath: maxSwitches
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4856037573181511083, guid: 6e86084b5d03a9948b77968479c5f10a,
         type: 3}
       propertyPath: m_havePropertiesChanged

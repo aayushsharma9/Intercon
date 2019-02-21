@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject startPanel, endPanel;
+    public GameObject startPanel, endPanel, pausePanel;
     public Color starFaded, starComplete;
     public TextMeshProUGUI optionalText;
     public Image[] stars;
@@ -19,13 +19,22 @@ public class UIManager : MonoBehaviour
             " switches.";
     }
 
-    public void nextLevel ()
+    private void Update ()
     {
-        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+        if (Input.GetKeyDown (KeyCode.Escape))
+        {
+            pausePanel.SetActive (!pausePanel.activeSelf);
+        }
     }
 
-    public void restart(){
-        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);        
+    public void nextLevel ()
+    {
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1, LoadSceneMode.Single);
+    }
+
+    public void restart ()
+    {
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex, LoadSceneMode.Single);
     }
 
     public void EndPanel ()
@@ -47,9 +56,9 @@ public class UIManager : MonoBehaviour
 
     public void closeAll ()
     {
-        Debug.Log ("Pressed");
         startPanel.SetActive (false);
         endPanel.SetActive (false);
+        pausePanel.SetActive (false);
         Time.timeScale = 1;
     }
 }
