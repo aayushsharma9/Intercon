@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] gameObjects;
     public GameObject switchText, collectedText;
     private UIManager uiManager;
+    private AudioSource conMusic, nexMusic;
     private bool canSwitch;
     private int currentState;
     public static int currentStars;
@@ -18,13 +19,21 @@ public class GameManager : MonoBehaviour
 
     private void Start ()
     {
-        currentState = 0;
+        if (!PlayerPrefs.HasKey ("State"))
+            PlayerPrefs.SetInt ("State", 0);
+
+        if (!PlayerPrefs.HasKey ("Stars " + "Level " + SceneManager.GetActiveScene ()))
+            PlayerPrefs.SetInt ("Stars " + "Level " + SceneManager.GetActiveScene ().buildIndex, 0);
+
+        currentState = PlayerPrefs.GetInt ("State");
         switchCount = 0;
 
         canSwitch = false;
         Camera.main.backgroundColor = stateBackgroundColors[currentState];
 
         uiManager = GameObject.Find ("UI Manager").GetComponent<UIManager> ();
+        conMusic = GameObject.Find ("ConMusic").GetComponent<AudioSource> ();
+        nexMusic = GameObject.Find ("NexMusic").GetComponent<AudioSource> ();
 
         for (int i = 0; i < stateObjects.Length; i++)
         {
@@ -39,6 +48,9 @@ public class GameManager : MonoBehaviour
                 gameObjects[i].SetActive (false);
             }
         }
+
+        conMusic.volume = 1 - currentState;
+        nexMusic.volume = currentState;
 
         Time.timeScale = 0;
     }
@@ -68,10 +80,11 @@ public class GameManager : MonoBehaviour
                 gameObjects[currentState].SetActive (false);
 
                 currentState = (currentState + 1) % stateObjects.Length;
-
+                PlayerPrefs.SetInt ("State", currentState);
                 stateObjects[currentState].SetActive (true);
                 gameObjects[currentState].SetActive (true);
-
+                conMusic.volume = 1 - currentState;
+                nexMusic.volume = currentState;
                 Camera.main.backgroundColor = stateBackgroundColors[currentState];
 
                 canSwitch = false;
@@ -95,6 +108,7 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 0;
+        PlayerPrefs.SetInt ("Stars " + "Level " + SceneManager.GetActiveScene ().buildIndex, currentStars);
         uiManager.EndPanel ();
     }
 }

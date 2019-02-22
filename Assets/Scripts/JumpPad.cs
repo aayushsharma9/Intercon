@@ -32,6 +32,7 @@ public class JumpPad : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             rb = other.gameObject.GetComponent<Rigidbody2D> ();
+            FindObjectOfType<AudioManager> ().Play ("JumpPad");
             rb.AddForce (this.transform.up * jumpForce, ForceMode2D.Impulse);
         }
     }

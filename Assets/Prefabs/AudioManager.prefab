@@ -44,8 +44,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - Name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - Name: Collect
+    clip: {fileID: 8300000, guid: 7b350cf0c7c9f2a4580029a643f6b2d4, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - Name: Teleport
+    clip: {fileID: 8300000, guid: b9f0a2d630a6fe843930d51c4911efad, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - Name: JumpPad
+    clip: {fileID: 8300000, guid: 7c7db54fabc27fb409bf28e8538c478d, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}

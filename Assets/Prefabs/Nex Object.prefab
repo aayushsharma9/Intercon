@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368eb58d6e35a3449b50d6e3cdaaf89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpIncrements: 20
-  jumpImpulse: 400
+  jumpIncrements: 40
+  jumpImpulse: 800
   jumpDuration: 0.3
 --- !u!114 &3147803326078916946
 MonoBehaviour:
