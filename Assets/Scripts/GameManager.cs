@@ -108,7 +108,8 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 0;
-        PlayerPrefs.SetInt ("Stars " + "Level " + SceneManager.GetActiveScene ().buildIndex, currentStars);
+        if (currentStars > PlayerPrefs.GetInt ("Stars " + "Level " + SceneManager.GetActiveScene ().buildIndex))
+            PlayerPrefs.SetInt ("Stars " + "Level " + SceneManager.GetActiveScene ().buildIndex, currentStars);
         uiManager.EndPanel ();
     }
 }

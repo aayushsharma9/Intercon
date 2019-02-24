@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed328d01c8e229443a3f9938df549e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 20
+  jumpForce: 100
   ringSpawnInterval: 0.5
   RingObject: {fileID: 3799435024426931878, guid: b3d8adeeca0d6e947b6cbd6426b6c9eb,
     type: 3}

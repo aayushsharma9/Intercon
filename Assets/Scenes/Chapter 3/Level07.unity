@@ -179,6 +179,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.8235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174507332768971532, guid: d5c8332023b5adc4cae48666423660d0,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.78039217
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c8332023b5adc4cae48666423660d0, type: 3}
 --- !u!1001 &61599540
@@ -2642,7 +2657,7 @@ PrefabInstance:
     - target: {fileID: 235268293041417479, guid: 6e86084b5d03a9948b77968479c5f10a,
         type: 3}
       propertyPath: maxSwitches
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e86084b5d03a9948b77968479c5f10a, type: 3}
@@ -2801,13 +2816,13 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 40902934, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 397.2
-      objectReference: {fileID: 0}
     - target: {fileID: 40902933, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40902934, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 397.2
       objectReference: {fileID: 0}
     - target: {fileID: 494160509, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2902,5 +2917,9 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 510f355fc9bd90a41a07d31d43b0e31a, type: 3}
+    - target: {fileID: 1283344830, guid: a893abe6c5fe44d43a066749e7a17076, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a893abe6c5fe44d43a066749e7a17076, type: 3}
