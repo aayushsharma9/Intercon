@@ -832,6 +832,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7717156714503210039, guid: c330a6340987ac94e82043cdcf27df0e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 84f55cc30c4df2d428802583bfad6d3f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c330a6340987ac94e82043cdcf27df0e, type: 3}
 --- !u!1001 &318448081
@@ -1525,16 +1530,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1646790358655861734, guid: df76a76bcd12ff84dbaff2c2e98c387f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 1646790358655861734, guid: df76a76bcd12ff84dbaff2c2e98c387f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.55
-      objectReference: {fileID: 0}
     - target: {fileID: 8696033948970215961, guid: df76a76bcd12ff84dbaff2c2e98c387f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1544,6 +1539,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646790358655861734, guid: df76a76bcd12ff84dbaff2c2e98c387f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646790358655861734, guid: df76a76bcd12ff84dbaff2c2e98c387f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df76a76bcd12ff84dbaff2c2e98c387f, type: 3}
@@ -1821,6 +1826,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3216892218395672007, guid: 7e836f7ccde2de6479cc7244b652af13,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3216892218395672003, guid: 7e836f7ccde2de6479cc7244b652af13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1830,11 +1840,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216892218395672007, guid: 7e836f7ccde2de6479cc7244b652af13,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e836f7ccde2de6479cc7244b652af13, type: 3}
@@ -4041,7 +4046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1714121322
 Transform:
   m_ObjectHideFlags: 0
@@ -4451,6 +4456,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.057650007
       objectReference: {fileID: 0}
+    - target: {fileID: 7717156714503210039, guid: c330a6340987ac94e82043cdcf27df0e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 84f55cc30c4df2d428802583bfad6d3f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c330a6340987ac94e82043cdcf27df0e, type: 3}
 --- !u!4 &1800351967 stripped
@@ -4882,9 +4892,9 @@ PrefabInstance:
       propertyPath: m_havePropertiesChanged
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 40902933, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 40902934, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 347.6
       objectReference: {fileID: 0}
     - target: {fileID: 6065597435602321412, guid: 03e8882109c24ea48bf3ee6d197b919e,
         type: 3}
@@ -4896,9 +4906,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3275.8
       objectReference: {fileID: 0}
-    - target: {fileID: 40902934, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 347.6
+    - target: {fileID: 40902933, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1745445877, guid: 03e8882109c24ea48bf3ee6d197b919e, type: 3}
       propertyPath: m_IsActive

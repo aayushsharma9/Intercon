@@ -14,8 +14,9 @@ public class Movement : MonoBehaviour
     private void Move ()
     {
         float horizontal_movement = Input.GetAxis ("Horizontal");
-        Vector2 movement = new Vector2 (horizontal_movement * acceleration, rb.velocity.y);
-        rb.AddForce (movement, ForceMode2D.Force);
+        Vector2 movement = new Vector2 (horizontal_movement * acceleration, 0);
+        // rb.AddForce (movement, ForceMode2D.Force);
+        rb.velocity += movement * Time.deltaTime;
     }
 
     public void FixedUpdate ()
